@@ -1,0 +1,30 @@
+#Python & FastAPI
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+
+#Node & React
+node_modules/
+dist/
+build/
+.npm/
+
+#ignore local vector database
+chroma_db/
+
+#Ignore the PDFs
+data/
+*.pdf
+*.csv
+
+#Env Variables & Security
+.env
+.env.local
+
+#OS & Editor Files
+.DS_Store
+.vscode/
+.idea/
