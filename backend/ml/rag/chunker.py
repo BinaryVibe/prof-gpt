@@ -1,4 +1,5 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+
 def split_document(text):
     text_splitter = RecursiveCharacterTextSplitter(
     
