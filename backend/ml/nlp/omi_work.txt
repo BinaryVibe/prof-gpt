@@ -1,0 +1,27 @@
+Ths is project folder structure.
+(This file is just for help, will delete it later)
+prof-gpt/
+│
+├── .gitignore              
+├── requirements.txt        
+├── README.md                
+└── backend/                 #FastAPI & ML logic goes here
+    ├── main.py              #The FastAPI entry point
+    ├── database.py          #ChromaDB connection logic
+    │
+    ├── api/                 # Your API endpoints
+    │   ├── routes.py        
+    │   └── dependencies.py  
+    │
+    ├── ml/                  
+    │   ├── rag/             # Ayaah WORK (Track 1)
+    │   │  
+    │   │
+    │   └── nlp/             # OMI'S WORK (Track 2)
+    │       ├── parser.py    
+    │       ├── classifier.py
+    │       └── generator.py
+    │
+    └── data/                # Local data (Ignored by GitHub)
+        ├── raw_pdfs/        # Where you drop your downloaded syllabus files
+        └── chroma_db/       # Your local vector database files
