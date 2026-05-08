@@ -52,3 +52,22 @@ def train_classifiers():
 
 if __name__ == "__main__":
     train_classifiers()
+
+def predict_intent(query):
+    """
+    Utility function for the API to load the saved model 
+    and predict the intent of a new user question.
+    """
+    # Get paths to the files your training script just saved
+    model_path = os.path.join(os.path.dirname(__file__), "intent_model.pkl")
+    vectorizer_path = os.path.join(os.path.dirname(__file__), "vectorizer.pkl")
+    
+    # Load them
+    model = joblib.load(model_path)
+    vectorizer = joblib.load(vectorizer_path)
+    
+    # Transform the user's question and predict
+    query_vec = vectorizer.transform([query])
+    prediction = model.predict(query_vec)
+    
+    return prediction[0]
