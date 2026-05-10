@@ -8,23 +8,24 @@ collection = client.get_or_create_collection(
     embedding_function=miniLM_ef
 )
 
-# 2. Some dummy syllabus data
+print("Chunking and embedding Policy data...")
+# 2. Dummy Syllabus Data (Category: policy)
 dummy_syllabus = """
 COMSATS University Late Policy:
 Any assignment submitted after the official deadline will incur a strict 10% penalty per day. 
 After 3 days, the assignment will absolutely not be accepted and the student will receive a zero.
-
-Final Project Requirements:
-The final project must be a full-stack web application. 
-Students must deploy the frontend to Vercel and the backend to a Linux server.
 """
+syllabus_chunks = split_document(dummy_syllabus)
+ingest_chunks(syllabus_chunks, collection, source_name="comsats_syllabus_2026.pdf", category="policy")
 
-print("Chunking text...")
-# 3. Slice the text using your LangChain logic
-chunks = split_document(dummy_syllabus)
-
-print(f"Created {len(chunks)} chunks. Vectorizing and saving to ChromaDB...")
-# 4. Turn text into math and save to the local file system
-ingest_chunks(chunks, collection)
+print("Chunking and embedding Technical data...")
+# 3. Dummy Lecture Data (Category: technical)
+dummy_lecture = """
+Introduction to React:
+React is a component-based frontend library. You manage state using hooks like useState and useEffect.
+To update the UI, React uses a Virtual DOM.
+"""
+lecture_chunks = split_document(dummy_lecture)
+ingest_chunks(lecture_chunks, collection, source_name="react_lecture_1.pdf", category="technical")
 
 print("✅ Dummy data successfully embedded and saved!")
