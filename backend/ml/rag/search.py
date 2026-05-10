@@ -6,10 +6,20 @@ collection = client.get_or_create_collection(
     embedding_function=miniLM_ef
 )
 
-def search_docs(query: str, k:int=3):
+def search_docs(query: str, intent: str=None, k:int=3):
+    intent_map = {
+    "Policy": "policy",
+    "Technical": "technical",
+    "Schedule": "schedule"    }
+    if intent in intent_map:
+        where_filter = {"category": {"$eq": intent_map[intent]}}
+    else:
+        where_filter = None
+        
     results = collection.query(
         query_texts=[query],
         include=["documents", "metadatas", "distances"],
+        where=where_filter,
         n_results=k
     )
 
@@ -35,9 +45,9 @@ if __name__ == "__main__":
     # Note: This assumes you have already run your embedder.py to ingest some dummy text into your local database!
     
     test_question = "What is the penalty for late assignment submissions?"
-    
+    test_intent = "Policy"
     print("TESTING K=1 (Top Match)")
-    search_docs(test_question, k=1)
+    search_docs(test_question, intent=test_intent, k=1)
     
     print("\nTESTING K=3 (Broad Search)")
     search_docs(test_question, k=3)
