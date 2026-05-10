@@ -7,6 +7,14 @@ from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score
 
+# Get paths to the files your training script just saved
+model_path = os.path.join(os.path.dirname(__file__), "intent_model.pkl")
+vectorizer_path = os.path.join(os.path.dirname(__file__), "vectorizer.pkl")
+    
+# Load them
+model = joblib.load(model_path)
+vectorizer = joblib.load(vectorizer_path)
+
 def train_classifiers():
     # 1. Load the dataset you generated
     data_path = os.path.join(os.path.dirname(__file__), "queries_dataset.csv")
@@ -55,16 +63,8 @@ if __name__ == "__main__":
 
 def predict_intent(query):
     """
-    Utility function for the API to load the saved model 
-    and predict the intent of a new user question.
+    Utility function to predict the intent of a new user question.
     """
-    # Get paths to the files your training script just saved
-    model_path = os.path.join(os.path.dirname(__file__), "intent_model.pkl")
-    vectorizer_path = os.path.join(os.path.dirname(__file__), "vectorizer.pkl")
-    
-    # Load them
-    model = joblib.load(model_path)
-    vectorizer = joblib.load(vectorizer_path)
     
     # Transform the user's question and predict
     query_vec = vectorizer.transform([query])
