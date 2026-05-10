@@ -9,16 +9,26 @@ collection = client.get_or_create_collection(
 def search_docs(query: str, k:int=3):
     results = collection.query(
         query_texts=[query],
+        include=["documents", "metadatas", "distances"],
         n_results=k
     )
 
     docs = results['documents'][0]
     dists= results['distances'][0]
+    metas = results['metadatas'][0] 
 
-    for doc, dist in zip(docs, dists):
+
+    context_blocks = []
+    for doc, meta, dist in zip(docs, metas, dists):
         print(f"\n Document: {doc}\nDistance: {dist}")
 
-    return docs
+        block = {
+            "content": doc,
+            "source": meta['source'],
+            "distance": dist
+        }
+        context_blocks.append(block)
+    return context_blocks
 
 # TEST BLOCK (Run this file directly to test)
 if __name__ == "__main__":
