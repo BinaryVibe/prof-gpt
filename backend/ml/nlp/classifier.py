@@ -56,7 +56,7 @@ def train_classifiers():
     joblib.dump(svm_model, model_path)
     joblib.dump(vectorizer, vectorizer_path)
     
-    print(f"\n✅ Training Complete! Model and Vectorizer saved to disk.")
+    print(f"\n Training Complete! Model and Vectorizer saved to disk.")
 
 if __name__ == "__main__":
     train_classifiers()
