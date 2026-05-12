@@ -39,8 +39,8 @@ def generate_training_data():
     output_path = os.path.join(os.path.dirname(__file__), "queries_dataset.csv")
     df.to_csv(output_path, index=False)
     
-    print(f"✅ Successfully generated dataset with {len(df)} samples!")
-    print(f"📁 Saved to: {output_path}")
+    print(f"Successfully generated dataset with {len(df)} samples!")
+    print(f"Saved to: {output_path}")
 
 if __name__ == "__main__":
     generate_training_data()
