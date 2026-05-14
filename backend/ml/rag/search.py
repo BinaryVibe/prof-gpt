@@ -8,9 +8,17 @@ collection = client.get_or_create_collection(
 
 def search_docs(query: str, intent: str=None, k:int=3):
     intent_map = {
-    "Policy": "policy",
-    "Technical": "technical",
-    "Schedule": "schedule"    }
+    "technical": "technical",
+    "lab_manual": "labs",
+    "policy": "policy_handbook",
+    "evaluation": "policy_handbook",
+    "schedule": "admin_docs",
+    "admin_fees": "admin_docs",
+    "past_papers": "exam_archive",
+    "career_cdc": "career_resources",
+    "society_events": "campus_life",
+    "clubs_acm": "campus_life"
+          }
     if intent in intent_map:
         where_filter = {"category": {"$eq": intent_map[intent]}}
     else:
