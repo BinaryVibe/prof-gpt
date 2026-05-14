@@ -1,0 +1,504 @@
+{
+  "test_cases": [
+    {
+      "query": "bro my useEffect is running twice on mount even with an empty dependency array, phatt raha hai code, is this a StrictMode issue or am I doing something fundamentally wrong with hooks?",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "yaar concept of KNN distance metrics sar se guzar gaya completely — like WHY does Manhattan distance outperform Euclidean on high-dimensional sparse data, can someone explain this intuitively?",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "my MongoDB aggregation pipeline with $lookup and $unwind is returning duplicate documents and I have no idea if the issue is in the foreign field mapping or the array deconstruction stage",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "bhai what is the actual difference between a process and a thread at the kernel level, not the textbook definition, like how does the OS scheduler treat them differently in context switching?",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "recursive binary search pe stack overflow aa raha hai for n=100000, should I switch to iterative or is there a tail-call optimization trick that works in C++?",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "yaar explain karo why a hash table with chaining has O(n) worst case but O(1) average — like what probability assumption makes the average case hold and when does it break down?",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "my React context is causing every single child component to re-render whenever any value in the context changes even if that child only uses one field — how do I fix this without splitting context into 10 pieces?",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "Dijkstra phatt raha hai negative edges pe — professor said use Bellman-Ford but I dont understand why relaxing edges V-1 times specifically guarantees shortest path, what is the mathematical intuition?",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "bro difference between overfitting and high variance concept sar se guzar gaya — if I increase training data does it always fix overfitting or are there cases where it still fails?",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "in Mongoose if I define a schema with a required field but then use findByIdAndUpdate with upsert true, does it skip schema validation entirely or only for the update operation?",
+      "intent": "Technical",
+      "expected_source": "lecture_slides.pdf"
+    },
+    {
+      "query": "yaar I got 19/25 in Sessional 1 and 21/25 in Sessional 2 but my portal is showing 36/50 total which makes no sense — is COMSATS adding both raw scores or scaling them somehow?",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "bro if relative grading is applied and the entire class does badly, can the professor literally give everyone an A — like is there a cap on how much the curve can shift grades upward?",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "my terminal marks are uploaded but the letter grade on the portal still shows IP — what does IP mean and how long before it converts to an actual grade after Terminal result submission?",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "phatt rahi hai situation yaar — I need exactly how many marks in the Terminal out of 50 to go from a D to a C given I have 28/50 in sessionals under absolute grading at COMSATS?",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "does CP get calculated into the sessional 50 marks or is it a completely separate component — because my teacher said 5 marks CP but the rubric shows 25+25 for sessional 1 and 2 only",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "bhai can a single quiz that was 10 marks be worth more than a sessional test in the final rubric if the teacher decides to reweight — is there any COMSATS policy limiting teacher discretion on marks distribution?",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "yaar what is the minimum percentage I need overall to get a B under COMSATS absolute grading — is it 70% or 75% because different teachers are saying different things",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "if I get zero in CP but ace both sessionals and terminal, is it mathematically possible to still get an A in the course at COMSATS Wah?",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "bro my grade shows W on the transcript after I dropped the course but my CGPA calculation on the portal went down — should a W grade affect CGPA calculation at COMSATS or is this a system error?",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "under relative grading if only 3 students take a course and two of them fail spectacularly, does the one remaining student automatically get an A even with 45% marks?",
+      "intent": "Evaluation",
+      "expected_source": "grading_rubric.pdf"
+    },
+    {
+      "query": "yaar my attendance is showing 76% on CU Online but I calculated it manually using the lecture schedule and I get 81% — which figure does the exam controller actually use to decide my eligibility?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "if I have a medical certificate covering 6 absences but I was already below 80% before those absences, does the certificate bring me back above the threshold or does it only waive the fine?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "bro I got a probation warning in Spring 2025 but then improved my CGPA above 2.0 in Fall 2025 — does the probation warning still appear on my official transcript or is it automatically cleared?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "phatt rahi hai yaar — if I drop a course today which is exactly week 8 of the semester, does it show as W or does it depend on whether assessments have been conducted already?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "can COMSATS issue a short attendance fine retroactively after the semester has ended if they discover a data entry error in the attendance portal from week 3?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "bhai if my attendance is 79.5% and the rule says 80%, does COMSATS round up to 80% or is it a hard cutoff where 79.9% still counts as short attendance?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "I submitted a medical certificate from a private clinic but the department rejected it saying only government hospital certificates are valid — is this actually written in the COMSATS student handbook or is the teacher making it up?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "yaar if I freeze my semester after week 10, does my short attendance fine from this semester still need to be paid before I can register next semester or does freezing cancel all dues?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "bro I received two probation warnings in consecutive semesters — at what point does COMSATS formally initiate expulsion proceedings and is there any appeal mechanism?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "if a teacher consistently marks students absent without basis and refuses to correct it, what is the formal escalation path in the COMSATS student handbook — department, dean, or registrar?",
+      "intent": "Policy",
+      "expected_source": "student_handbook.pdf"
+    },
+    {
+      "query": "bro in Lab Task 4 the manual says to implement a min-heap but my output is matching expected results for a max-heap — is the manual itself wrong or am I misunderstanding the deletion step?",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "yaar Lab 6 environment setup pe phatt raha hai — the manual says install GCC 9.0 but my Ubuntu in the lab VM already has GCC 11.0 and some syntax in the manual code is throwing deprecated warnings",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "do the post-lab questions in Lab 8 need to be answered with reference to the specific dataset used in the lab session or can I use a general theoretical answer from the textbook?",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "bhai my Lab 5 viva prep question asks to explain pipelining hazards but the lab task itself was about implementing a queue — is the viva scope limited to the lab tasks or does it include related lecture content?",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "the Lab 3 manual says submit by midnight but it does not specify which timezone — I am accessing CU Online from outside Pakistan right now, does it use PST strictly?",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "yaar Lab Task 2 requires Wireshark packet capture but the COMSATS lab machines block promiscuous mode on the NIC — is there an alternative tool mentioned in the lab manual for this specific constraint?",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "my Lab 7 environment setup involves configuring a Hadoop cluster but the manual was written for single-node pseudo-distributed — phatt raha hai, does the grading expect actual multi-node or is pseudo-distributed acceptable?",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "bro can two students submit identical post-lab answers if they worked on the same machine during the lab session — is there an academic integrity clause specific to lab manual submissions at COMSATS?",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "in Lab 9 the viva prep section lists 7 questions but the instructor only asked 3 during my viva and gave partial marks — is there a standardized viva marking rubric in the lab manual or is it fully at instructor discretion?",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "yaar Lab Task 3 output screenshot pe phatt rahi hai — the manual says attach terminal output but my program writes results to a file, do I screenshot the file contents or the terminal command that generated it?",
+      "intent": "Lab_manual",
+      "expected_source": "lab_guidelines.pdf"
+    },
+    {
+      "query": "bro Sir Mushtaq Ahmed Bhatti ne kaha tha that Shine internship applications are open but I cannot find the form anywhere on the CDC portal — has the deadline already passed or is the link broken?",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "yaar what is the minimum CGPA cutoff for the 10Pearls Shine program — someone told me 2.8 but another person said 3.0 and the placement cell is not picking up the phone",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "if I got rejected from the Shine internship in Fall 2025, am I permanently blacklisted from reapplying or can I submit a fresh application for Spring 2026 with an updated portfolio?",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "bhai does the COMSATS CDC office provide an official reference letter specifically for the 10Pearls Shine program or do I need to get one from my department head separately?",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "Job Fair 2026 registration phatt rahi hai yaar — the portal keeps timing out when I try to upload my CV, is there an alternative submission method through the placement cell email?",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "does attending the CDC resume review session with Sir Mushtaq Ahmed Bhatti guarantee priority consideration in company shortlisting for Job Fair 2026 or is it just advisory?",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "bro if the 10Pearls Shine internship is unpaid, does COMSATS CDC provide any stipend support or transport allowance for selected students from Wah campus who have to commute to Islamabad?",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "yaar I am in semester 5 with a 3.4 CGPA — am I more competitive for the Shine program than a semester 7 student with a 2.9 CGPA, or does the placement cell weight seniority over GPA?",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "can the COMSATS placement cell facilitate remote internship placements for students who cannot physically commute, or does every company in their network require on-site presence?",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "bhai if I have already secured an internship independently, can the CDC office still give me an official COMSATS endorsement letter to present to the company, or is that only for CDC-facilitated placements?",
+      "intent": "Career_cdc",
+      "expected_source": "cdc_internships.pdf"
+    },
+    {
+      "query": "yaar the academic calendar says Sessional 1 starts week 7 but my department's date sheet shows week 6 — which one is legally binding and who do I escalate to if there is a conflict?",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "bro if the Terminal exam date sheet is released and then a public holiday falls in the middle of the exam week, does COMSATS automatically issue a revised schedule or do students have to formally request it?",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "make-up class schedule pe confusion hai yaar — my teacher scheduled a make-up on a day I already have three back-to-back classes, is there a university policy limiting how many make-up classes can be scheduled per week?",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "phatt raha hai bro — the spring break dates on the COMSATS website say March 24-28 but my teacher is saying we have class on March 26 because it is a make-up — can a teacher override the official spring break?",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "what is the exact gap between the last teaching day and the first Terminal exam day in Spring 2026 — I need to know if there is an official study leave period or if exams start immediately?",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "bhai if the revised schedule was issued after I already booked travel during what I thought was spring break, does COMSATS have any policy for students who cannot attend newly scheduled make-up classes due to prior commitments?",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "yaar the date sheet shows my two Terminal exams on the same day at the same time — is this a system error or can COMSATS actually schedule clashing exams and then fix it on request?",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "bro when does the Fall 2026 semester registration window open according to the academic calendar — I need to plan my course selection and the portal is showing no information yet",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "if Eid holiday causes 4 consecutive class cancellations, does the academic calendar automatically extend the semester by 4 days or does the university expect teachers to compress the remaining syllabus?",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "yaar my timetable shows a class at 8am Monday but the room is double-booked according to the revised schedule posted on the notice board — which schedule takes precedence and who resolves room conflicts?",
+      "intent": "Schedule",
+      "expected_source": "academic_calendar.pdf"
+    },
+    {
+      "query": "bro my fee challan generated on CU Online shows a different amount than what the accounts office told me verbally — which one is authoritative and what if I pay the wrong amount?",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "yaar I paid my fee through HBL Internet Banking 3 days ago but CU Online still shows unpaid — the HBL transaction reference exists, what is the exact escalation process before the fine per day starts applying?",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "phatt rahi hai situation — my installment plan request was submitted before the deadline but it is still pending approval and the fine per day has started accumulating — will the fine be reversed if my installment plan gets approved retroactively?",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "bhai if I miss the second installment deadline by 2 days, does COMSATS cancel the entire installment plan and demand full payment immediately or just charge a fine per day on the overdue installment?",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "can I pay my COMSATS fee challan through Bank Alfalah Alfa app using a third-party account that is not in my name — my father's account — without the payment being rejected by the system?",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "yaar does the fine per day calculation at COMSATS include Sundays and public holidays or is it only counted on working days — this makes a huge difference to how much I owe",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "bro my CU Online portal is showing two separate fee challans for the same semester — one for tuition and one with a label I don't recognize — do I need to pay both or is one a system duplicate?",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "if I freeze my semester after paying 50% of the fee under an installment plan, do I get a refund of the paid portion or is it credited toward the next semester I return in?",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "yaar my challan expired at midnight and today is a bank holiday so I cannot regenerate and pay immediately — will the fine per day be charged for today even though it was technically a system+bank issue?",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "bhai is there a documented maximum fine cap at COMSATS — like if I am 45 days late on fee submission, does the fine keep compounding indefinitely or does it stop at a ceiling amount?",
+      "intent": "Admin_fees",
+      "expected_source": "fee_structure.pdf"
+    },
+    {
+      "query": "yaar do the Fall 2024 Terminal papers for Operating Systems at COMSATS Wah have more diagram-based questions or theoretical definition questions — I need to know how to split my prep time",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "bro are the questions in the Spring 2025 Sessional 2 for Data Structures literally copy-pasted from the Fall 2024 paper or does the teacher at least change the variable names and values?",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "give me the Spring 2023 Terminal paper for Discrete Mathematics — specifically I want to know if the pigeonhole principle and graph coloring were both asked or only one of them",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "phatt raha hai yaar — I have 6 hours before Sessional 1 for Algorithms, based on past papers from 2023 and 2024 what are the highest-frequency topics I should prioritize right now?",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "bhai in the Fall 2023 DBMS Terminal past paper, were the normalization questions asking up to BCNF only or did they go into 4NF and 5NF as well — my teacher is being vague about scope",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "is there a pattern across the last 5 years of Computer Networks Terminal papers at COMSATS Wah showing that TCP/IP model questions always appear in Q1 — or does the sequence change each year?",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "yaar the Spring 2024 Sessional 2 paper for OOP — were the questions mostly conceptual like explain polymorphism or were they code-writing questions where you have to implement a class hierarchy?",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "bro I found two different versions of what people are calling the Fall 2024 Sessional 1 paper for Linear Algebra online — how do I verify which one is the actual past paper versus a fake?",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "based on past papers from Spring 2022 to Fall 2024 for Software Engineering at COMSATS, has any question about Agile vs Waterfall appeared in every single Terminal or does it skip some semesters?",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "yaar do past papers for the Applied Physics Terminal show that numerical calculations carry more marks than theoretical derivations — I need the actual breakdown from at least 3 past papers to decide my strategy",
+      "intent": "Past_papers",
+      "expected_source": "exam_archive.pdf"
+    },
+    {
+      "query": "bro is the CLS Mushaira next week open to students who want to recite their own original poetry or is it only for recognized poets invited by the society — I wrote something and want to perform",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "yaar the CLS Graphics competition submission portal is showing an error when I upload files above 5MB — is there an alternative submission email or does the file size limit mean I need to compress my design?",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "phatt rahi hai situation — I registered for the CLS declamation contest but now two other students from my department also registered and our teacher is only allowing one representative — how does CLS handle intra-department conflicts?",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "bhai the seminar in the auditorium by CLS was rescheduled three times — if I attended the first two attempts before cancellation, does CLS still count those toward any participation certificate?",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "yaar does the CLS Graphics competition allow AI-generated artwork as part of the submission or is there a policy specifically banning tools like Midjourney and DALL-E from entries?",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "bro I won the CLS declamation contest last semester but this semester the society is saying past winners cannot reenter for 2 semesters — is this actually a written CLS rule or is someone making it up?",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "can the CLS society hold a Mushaira in the open-air amphitheater instead of the auditorium — or does every official CLS seminar and event require a formally booked indoor venue with AV equipment?",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "yaar I submitted a design for the CLS Graphics competition but forgot to include my student ID on the file — can I resubmit before the deadline or does the first submission count as final?",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "bhai does participating in the CLS Mushaira as a performer give any formal acknowledgment from COMSATS administration — like a letter for job applications — or is the CLS certificate not officially recognized?",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "bro the CLS declamation contest rules say speeches must be 3-5 minutes but the registration form has a field for 7-minute slots — which one is correct and what happens if I go over time during the actual event?",
+      "intent": "Society_events",
+      "expected_source": "cls_acm_events.pdf"
+    },
+    {
+      "query": "yaar CODEZAAR registration phatt rahi hai — the form closes in 2 hours but it keeps giving a network error after I submit, is there a backup registration method through the ACM CUI Wah team directly?",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    },
+    {
+      "query": "bro I want to join the ACM frontend team but my portfolio only has Figma designs and no actual coded projects — will the ACM CUI Wah executive committee reject my application outright or consider design skills separately?",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    },
+    {
+      "query": "phatt raha hai — during CODEZAAR my judge gave me zero on the speed coding round but my solution was correct, just used a different algorithm than expected — is there a formal score dispute mechanism in ACM CUI Wah competitions?",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    },
+    {
+      "query": "yaar does an ACM membership at CUI Wah Chapter automatically link to the global ACM digital library access or do I need to separately register on the international ACM website with my student membership number?",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    },
+    {
+      "query": "bhai the ACM dev workshop on React was announced for Saturday but only 8 students showed up — will ACM CUI Wah reschedule it or is the recorded session being shared, because I missed it for a valid reason",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    },
+    {
+      "query": "if I am already on the CLS Graphics team, can I simultaneously hold a position on the ACM CUI Wah frontend team or does COMSATS have a policy against holding two society leadership roles at once?",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    },
+    {
+      "query": "yaar the CODEZAAR problem set this year had questions that were clearly LeetCode Hard difficulty — is the ACM CUI Wah competition supposed to be beginner-friendly or has the difficulty intentionally increased this year?",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    },
+    {
+      "query": "bro does ACM CUI Wah provide any formal mentorship pairing where a senior frontend developer in the team is assigned to guide a junior member through a real project — or is it just workshops with no follow-up?",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    },
+    {
+      "query": "yaar I paid my ACM membership fee last semester but I never got added to the member portal or the exclusive WhatsApp group — who do I contact to fix this and will my membership period be extended to compensate?",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    },
+    {
+      "query": "bhai can ACM CUI Wah Chapter collaborate with COMSATS CDC to host a combined dev workshop and job fair where participating companies specifically recruit from the ACM member pool — has this ever been done before?",
+      "intent": "Clubs_acm",
+      "expected_source": "acm_membership.pdf"
+    }
+  ]
+}
