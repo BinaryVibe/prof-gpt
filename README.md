@@ -35,7 +35,7 @@ Developed with a strict 96% Precision@3 retrieval accuracy, Prof GPT combines lo
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 PROF-GPT/
@@ -71,7 +71,7 @@ PROF-GPT/
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the repository
 
@@ -133,7 +133,7 @@ streamlit run frontend/app.py
 
 ---
 
-## 🔬 RAG Pipeline Configuration
+## RAG Pipeline Configuration
 
 During testing, the retrieval engine was mathematically validated against a 100-question evaluation dataset. The optimal parameters for the academic document formats are:
 
