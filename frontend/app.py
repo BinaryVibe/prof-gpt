@@ -92,7 +92,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # 6. Chat Input Logic
-if prompt := st.chat_input("Ask Prof GPT about COMSATS..."):
+if prompt := st.chat_input("Ask Prof GPT about your documents..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
