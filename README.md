@@ -76,7 +76,7 @@ PROF-GPT/
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/BinaryVibe/prof-gpt.git](https://github.com/BinaryVibe//prof-gpt.git)
+git clone https://github.com/BinaryVibe/prof-gpt.git
 cd prof-gpt
 
 ```
