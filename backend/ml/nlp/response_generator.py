@@ -45,7 +45,7 @@ def generate_academic_response(query, context_blocks, intent):
     """
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash", 
+        model="gemini-3.1-flash-lite", 
         contents=query,
         config={'system_instruction': system_prompt}
     )
