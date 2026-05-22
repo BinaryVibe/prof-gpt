@@ -48,7 +48,7 @@ def search_docs(query: str, intent: str=None, k:int=3):
         context_blocks.append(block)
     return context_blocks
 
-# TEST BLOCK (Run this file directly to test)
+# TEST BLOCK
 if __name__ == "__main__":
     # Note: This assumes you have already run your embedder.py to ingest some dummy text into your local database!
     
